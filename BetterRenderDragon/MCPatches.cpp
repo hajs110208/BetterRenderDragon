@@ -52,7 +52,7 @@ void initMCPatches() {
 	
 	//MinecraftGame::_updateLightingModel
 	if (auto ptr = FindSignature("83 FB 01 75 11 48 8B 01 48 8B 40 40 FF 15 ? ? ? ? 32 C0 EB 02"); ptr) {
-		//1.20.30.02
+		//1.20.30.04
 		ScopedVP(ptr, 22, PAGE_READWRITE);
 		ptr[18] = 0xB0;
 		ptr[19] = 0x01;
